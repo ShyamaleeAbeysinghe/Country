@@ -9,6 +9,24 @@
     
 </head>
 <body>
+    <div class="container m-2 bg-white p-3">
+        <div class="d-flex" role="search">
+            <input id="txtInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit" onclick="searchCountry()">Search</button>
+        </div>
+<div class="container">
+    <div class="row">
+        <img class="img-thumbnail img01" id="flagImg" alt="" >
+        <h1 id="name">Name</h1>
+        <p id="officialName">Official Name</p>
+        <p id="population">Population </p> 
+        <p id="capitalOfCountry">Capital of country</p>
+        <p id="aboutContry">About Contry</p>
+        <a id="map">Map</a>
+    </div>
+</div>
+
+    </div>
     <h1 class="text-center ">Contries OF The World</h1>
     <div class="container">
         <table  class="table table-dark" id="tblCountries" >
@@ -16,6 +34,7 @@
         </table>
 
     </div>
+   
 
   
   

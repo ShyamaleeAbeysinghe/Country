@@ -32,3 +32,32 @@ fetch("https://restcountries.com/v3.1/all")
 
     tblCountries.innerHTML=tableBody;
 })
+
+function searchCountry(){
+    let userInput = document.getElementById("txtInput").value;
+
+    let flagImg = document.getElementById("flagImg");
+    let name = document.getElementById("name");
+    let officialName = document.getElementById("officialName");
+    let population = document.getElementById("population");
+    let capitalOfCountry = document.getElementById("capitalOfCountry");
+    let aboutContry = document.getElementById("aboutContry");
+    let map = document.getElementById("map");
+
+    fetch(`https://restcountries.com/v3.1/name/${userInput}`)
+    .then(res=>res.json())
+    .then(data=>{
+        data.forEach(obj=>{
+           flagImg.src=obj.flags.png
+           name.innerText=obj.name.common
+           officialName.innerText=obj.name.official
+           capitalOfCountry.innerText=obj.capital
+           aboutContry.innerText=obj.flags.alt 
+           map.href=obj.maps.googleMaps
+        })
+
+    })
+
+
+
+}
